@@ -1,0 +1,49 @@
+// 修改 segmented-control 默认样式
+.segmented-control {
+  height: 60rpx;
+
+  .segmented-control__item .segmented-control__text {
+    color: #cedae6 !important;
+  }
+
+  .segmented-control__item--button--active .segmented-control__text {
+    color: #214371 !important;
+  }
+}
+
+// h5 popup 弹起时需要把 tabbar 覆盖，否则部分 popup 被覆盖看不见
+.uni-tabbar-bottom {
+  z-index: 98 !important;
+}
+
+// uni switch 默认样式修改
+.uni-switch-input {
+  &::before {
+    background-color: #c0d1e8 !important;
+  }
+
+  &::after {
+    background-color: #597ba9 !important;
+  }
+
+  &.uni-switch-input-checked {
+    border-color: $uni-color-primary !important;
+    background-color: $uni-color-primary !important;
+  }
+}
+
+// collapse 折叠面板
+.collapse-main {
+  .uni-collapse,
+  .uni-collapse-item__wrap {
+    background-color: transparent !important;
+
+    .uni-icons {
+      font-size: 12px !important;
+    }
+  }
+
+  .uni-collapse-item__wrap-content {
+    color: #ffffff !important;
+  }
+}

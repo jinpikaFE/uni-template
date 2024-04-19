@@ -1,0 +1,126 @@
+@import '@/uni.scss';
+
+/* button
+   -----------------------------------------*/
+.u-button--primary {
+  // 更改 primary 类型的按钮文字
+  .u-button__text {
+    color: $uni-text-dark;
+  }
+}
+
+/* modal
+   -----------------------------------------*/
+.u-modal {
+  // modal 标题
+  .u-modal__title {
+    color: #163258 !important;
+  }
+
+  // content
+  .u-modal__content {
+    color: #333333;
+  }
+
+  // 确定按钮颜色
+  .u-modal__button-group__wrapper--confirm .u-modal__button-group__wrapper__text {
+    color: #39639e !important;
+  }
+}
+
+// 按钮样式
+.u-button--primary.u-button--normal {
+  background: #03a96e !important; //linear-gradient(180deg, #bde9f7, #72abbd) !important;
+  border-width: 0 !important;
+  height: 45px !important;
+
+  .u-button__text {
+    font-size: 18px !important;
+    font-weight: 500;
+    color: #ffffff;
+  }
+
+  &.u-button--plain {
+    background: transparent !important;
+    border: 1px solid #a2d2e2 !important;
+
+    .u-button__text {
+      color: #a2d2e2;
+    }
+  }
+}
+
+// 统一按钮外观尺寸
+.btn-wrapper {
+  width: calc(100vw - 70rpx * 2);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  // 固定到底部
+  &.btn-fixed {
+    position: fixed;
+    bottom: calc(constant(safe-area-inset-bottom) + 30rpx);
+    bottom: calc(env(safe-area-inset-bottom) + 30rpx);
+  }
+}
+
+.u-picker {
+  // background: #234370;
+  border-radius: 40rpx 40rpx 0 0;
+
+  .u-toolbar {
+    height: 100rpx !important;
+
+    .u-toolbar__cancel__wrapper {
+      height: 100%;
+      line-height: 100rpx;
+      width: 140rpx;
+      text-align: center;
+      flex-shrink: 0;
+      color: #6988b2;
+    }
+
+    .u-toolbar__confirm__wrapper {
+      height: 100%;
+      line-height: 100rpx;
+      width: 140rpx;
+      text-align: center;
+      flex-shrink: 0;
+      font-family: PingFang SC, PingFang SC-Medium;
+      font-weight: 500;
+      color: #72cae2;
+    }
+  }
+
+  .picker-view {
+    height: 474rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC, PingFang SC-Regular;
+    font-weight: 400;
+    text-align: center;
+    color: #6d8eba;
+
+    picker-view-column {
+      view {
+        line-height: 100rpx;
+      }
+    }
+  }
+}
+
+.u-switch {
+  // 原点背景色
+  .u-switch__node {
+    background-color: #234370 !important;
+  }
+}
+
+.u-button:after,uni-button:after {
+  display: none;
+}
+
+.u-button {
+  border: unset !important;
+}
+

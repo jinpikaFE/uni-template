@@ -1,0 +1,12 @@
+dist
+backup-src
+src/components/uni-*/*
+src/components/base-*/*
+uni_modules
+src/lib/*
+node_modules
+uni_modules
+pnpm-lock.yaml
+*.d.ts
+**/*.svg
+manifest.json

@@ -1,0 +1,10 @@
+@import '@/uni.scss';
+
+// 导出变量
+:export {
+  primaryColor: $uni-color-primary;
+  secondaryColor: $uni-color-secondary;
+  iconColor: $uni-icon-color;
+  iconColorDark: $uni-icon-color-dark;
+  clockColor: $clock-color;
+}

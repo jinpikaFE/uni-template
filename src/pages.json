@@ -1,0 +1,55 @@
+{
+  "pages": [
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "h5": {
+          "navigationStyle": "custom"
+        }
+      }
+    },
+    {
+      "path": "pages/webview/index",
+      "style": {
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black"
+      }
+    }
+  ],
+  "subPackages": [
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "window": {
+    "pageOrientation": "portrait"
+  },
+  "tabBar": {
+    "color": "#8091A3",
+    "selectedColor": "#03A96E",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    // "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/home/index"
+        // "iconPath": "static/imgs/icon_tab1_inactive.png",
+        // "selectedIconPath": "static/imgs/icon_tab1_active.png",
+        // "text": "首页"
+      }
+    ]
+  },
+  "easycom": {
+    "custom": {
+      "^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^iui-(.*)": "@/components/iui-design/components/iui-$1/iui-$1.vue"
+    }
+  }
+}
