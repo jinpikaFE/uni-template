@@ -29,16 +29,10 @@ type ListItem = {
 };
 const list: ListItem[] = [
   {
-    pagePath: '/pages/dynamic/index',
-    iconPath: '/static/imgs/icon_dynamic_inactive.png',
-    selectedIconPath: '/static/imgs/icon_dynamic_active.png',
-    text: '动态',
-  },
-  {
-    pagePath: '/pages/sleepAid/index',
-    iconPath: '/static/imgs/icon_sleepAid_inactive.png',
-    selectedIconPath: '/static/imgs/icon_sleepAid_active.png',
-    text: '助眠',
+    pagePath: '/pages/home/index',
+    iconPath: '/static/imgs/icon_home_inactive.png',
+    selectedIconPath: '/static/imgs/icon_home_active.png',
+    text: '首页',
   },
   {
     pagePath: '/pages/mine/index',

@@ -37,7 +37,7 @@ export const useAppStore = defineStore('app', {
     // 标题栏高度（不包含 statusBar）= 状态栏到胶囊的间距（胶囊上坐标位置-状态栏高度） * 2 + 胶囊高度
     getHeaderHeight: state => {
       if (state.menuBtnInfo && state.systemInfo) {
-        let height = (state.menuBtnInfo.top - state.systemInfo.statusBarHeight!) * 2 + state.menuBtnInfo.height;
+        const height = (state.menuBtnInfo.top - state.systemInfo.statusBarHeight!) * 2 + state.menuBtnInfo.height;
         console.log(height, 'heightheight')
         return height
       }
@@ -47,7 +47,7 @@ export const useAppStore = defineStore('app', {
   actions: {
     initSystemInfo() {
       // 如果缓存里有数据-就直接拿缓存里得值
-      let storageSystemInfo = uni.getStorageSync('storageSystemInfo');
+      const storageSystemInfo = uni.getStorageSync('storageSystemInfo');
       // console.log(storageSystemInfo,'storageSystemInfo')
       // 获取系统信息
       this.systemInfo = storageSystemInfo || uni.getSystemInfoSync();

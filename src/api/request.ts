@@ -1,10 +1,10 @@
+import { storage } from '@/utils/Storage';
 import axios, { type AxiosPromise } from 'axios';
 import type { AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
 import buildURL from 'axios/lib/helpers/buildURL';
 import { identity, pickBy, throttle } from 'lodash-es';
 import { stringify } from 'qs';
-import { storage } from '@/utils';
 
 type ParamsSerializer = AxiosRequestConfig['paramsSerializer'];
 
@@ -27,7 +27,7 @@ export function isPlainObject(obj: any) {
 export const reLogin = throttle(
   () => {
     // uni.removeStorageSync('TOKEN');
-    storage.removeRefreshToken();
+    // storage.clear();
     // globalStore.setAuthInfo(null);
     // globalStore.setGlobalInfo(null);
     // unLoginModalStore.setShow(true);
@@ -78,7 +78,7 @@ export const instance: AxiosInstance = axios.create({
 instance.interceptors.request.use(
   config => {
     // 获取携带 access_token
-    const token = storage.getAccessToken();
+    const token = storage.get('token');
     if (token && !(config as any)?.notToken) {
       // config.url += (config.url?.includes('?') ? '&' : '?') + 'access_token=' + token;
       Object.assign(config.headers!, {
